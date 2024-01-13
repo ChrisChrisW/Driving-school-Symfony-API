@@ -1,0 +1,18 @@
+{% extends 'base_email.html.twig' %}
+
+{% block body %}
+    <p>Cher(e) {{ course.candidate.email }},</p>
+
+    <p>Nous sommes désolés de vous informer que le cours suivant a été annulé :</p>
+
+    <p>Formule du cours: {{ course.formula.wording }}</p>
+    <p>Date du cours: {{ course.startDate|date('D, M d, Y') }}</p>
+    <p>Heure du cours: {{ course.startDate|date('H:i') }}</p>
+
+    <p>Nous nous excusons pour tout désagrément que cela pourrait causer et nous serons heureux de reprogrammer votre cours à votre convenance le plus tôt possible.</p>
+
+    <p>Merci d'avoir choisi notre école de conduite.</p>
+
+    <p>Sincèrement,</p>
+    <p>L'équipe de l'auto école Auto Héros</p>
+{% endblock %}

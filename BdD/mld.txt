@@ -1,0 +1,12 @@
+# Modèle créé le : Fri Jan 27 00:25:47 CET 2023 
+Vehicle (id_Vehicle, numPlate_Vehicle, purchaseDate_Vehicle, power_Vehicle) 
+Formula (id_Formula, wording_Formula, slug_Formula, price_Formula, #drivingformula_id_drivingformula) 
+Candidate (id_Candidate, email_Candidate, address_Candidate, age_Candidate) 
+Trainer (id_Trainer, numSs_Trainer) 
+DrivingFormula (id_DrivingFormula, nbHours_DrivingFormula, #formula_id_formula) 
+DrivingFormulaHasVehicle (id_Vehicle, id_DrivingFormula) 
+TrainerHasFormula (id_Formula, id_Trainer) 
+User_(UserHasTrainerOrHasCandidate) (id_Trainer, id_Candidate, lastName_User, firstName_User) 
+courseDates (id_Trainer, id_Candidate, id_Vehicle, id_Formula, isAchieve_candidateHasFormulaAndTakesCourses, isConfirm_candidateHasFormulaAndTakesCourses, isRedirectedToAnotherTrainer_candidateHasFormulaAndTakesCourses, startDate_candidateHasFormulaAndTakesCourses, endDate_candidateHasFormulaAndTakesCourses) 
+FormulaCodeDate_(CandidateHasCodeFormula) (id_Candidate, id_Formula, startDate_FormulaCodeDate, endDate_FormulaCodeDate) 
+CandidateHasDrivingFormula (id_DrivingFormula, id_Candidate) 
